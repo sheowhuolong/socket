@@ -68,16 +68,40 @@
 			isa = PBXGroup;
 			children = (
 				0476BE642824CA3E00636C32 /* AppDelegate.swift */,
-				0476BE662824CA3E00636C32 /* ViewController.swift */,
-				0476BE7A2824E78100636C32 /* TradeInfo.swift */,
-				0476BE762824CEA900636C32 /* TradeTableViewCell.swift */,
-				0476BE782824D2DF00636C32 /* TradeTableViewHeaderView.swift */,
+				0476BE7E2824FAD300636C32 /* view */,
+				0476BE7D2824FACB00636C32 /* controller */,
+				0476BE7C2824FAC300636C32 /* model */,
 				0476BE682824CA3E00636C32 /* Main.storyboard */,
 				0476BE6B2824CA4200636C32 /* Assets.xcassets */,
 				0476BE6D2824CA4200636C32 /* LaunchScreen.storyboard */,
 				0476BE702824CA4200636C32 /* Info.plist */,
 			);
 			path = PlayWebSocket;
+			sourceTree = "<group>";
+		};
+		0476BE7C2824FAC300636C32 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0476BE7A2824E78100636C32 /* TradeInfo.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		0476BE7D2824FACB00636C32 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				0476BE662824CA3E00636C32 /* ViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		0476BE7E2824FAD300636C32 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0476BE782824D2DF00636C32 /* TradeTableViewHeaderView.swift */,
+				0476BE762824CEA900636C32 /* TradeTableViewCell.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		B8E9D830243F8E15C631719D /* Frameworks */ = {

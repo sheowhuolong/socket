@@ -31,23 +31,13 @@ class TradeTableViewCell: UITableViewCell {
     }
     
     func setContent(data: TradeInfo) {
-        
-        
-        // 我們上面 print 出的時間戳
         let timeStamp = data.E
-        // 將時間戳轉換成 TimeInterval
         let timeInterval = TimeInterval(timeStamp)
-        // 初始化一個 Date
         let date = Date(timeIntervalSince1970: timeInterval)
-        // 實例化一個 DateFormatter
         let dateFormatter = DateFormatter()
-        // 設定日期格式
         dateFormatter.dateFormat = "HH:mm:ss"
-        // 將日期轉換成 string 輸出給 today
         let time = dateFormatter.string(from: date)
-        
-        
-        
+ 
         timeLabel.text = time
         priceLabel.text = data.p
         countLabel.text = data.q

@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     private var tableView = UITableView()
     private var socket: WebSocketClient?
     private var tradeInfo = [TradeInfo]()
-
+    
+    private var socketURL = "wss://stream.yshyqxx.com/stream?streams=btcusdt@trade"
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     private func fetchData() {
-        guard let url = URL(string: "wss://stream.yshyqxx.com/stream?streams=btcusdt@trade") else { return }
+        guard let url = URL(string: socketURL) else { return }
         
         var request = URLRequest(url: url)
         request.timeoutInterval = 5
@@ -80,15 +81,13 @@ extension ViewController: WebSocketDelegate {
         
         let data = Trade(json: json)
         self.tradeInfo.insert(data.data, at: 0)
-        clearData()
+        self.clearData()
         self.tableView.reloadData()
     }
     
     func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
         
     }
-    
-    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
